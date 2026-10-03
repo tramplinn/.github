@@ -135,17 +135,9 @@
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td align="center">
 <a href="https://gitlab.com/semao0"><img src="assets/team/semao0.png" width="80" alt=""><br><b>Семён Белоусов</b></a><br>
 <sub>Backend · Frontend · Инфраструктура</sub>
-</td>
-<td align="center" width="33%">
-<a href="https://gitlab.com/A1exandr2"><img src="assets/team/A1exandr2.png" width="80" alt=""><br><b>A1exandr2</b></a><br>
-<sub>&nbsp;</sub>
-</td>
-<td align="center" width="33%">
-<a href="https://gitlab.com/Hishhiki"><img src="assets/team/Hishhiki.png" width="80" alt=""><br><b>Hishhiki</b></a><br>
-<sub>&nbsp;</sub>
 </td>
 </tr>
 </table>
