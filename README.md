@@ -11,7 +11,6 @@
 
 [![Спецификации](https://img.shields.io/badge/Спецификации-продукт_и_кейсы-2b7fff?style=for-the-badge)](https://gitlab.com/tramplin1/specs)
 [![Архитектура](https://img.shields.io/badge/Архитектура-5_сервисов-16a34a?style=for-the-badge)](#под-капотом)
-[![Запуск](https://img.shields.io/badge/Запуск-локально_за_4_команды-9333ea?style=for-the-badge)](#с-чего-начать)
 
 ![Python](https://img.shields.io/badge/Python_3.14-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
@@ -119,14 +118,6 @@
 <a href="assets/arch.png"><img src="assets/arch.png" width="720" alt="Схема архитектуры Трамплина"></a><br>
 <sub>Backend — единственный владелец базы данных. Email-service берёт задания из RabbitMQ, MCP-сервер ходит в API backend, Piston живёт во внутренней сети без доступа к базе</sub>
 </div>
-
-## С чего начать
-
-| Я хочу… | Куда идти |
-| --- | --- |
-| **понять, зачем платформа** | [бизнес-ценность](https://gitlab.com/tramplin1/specs/-/blob/main/product/business-value.md) → [продукты](https://gitlab.com/tramplin1/specs/-/blob/main/product/products.md) → [кейсы по ролям](https://gitlab.com/tramplin1/specs/-/blob/main/product/use-cases.md) |
-| **запустить локально** | в **backend**: `make up && make migrate && make seed && make run`, затем в **frontend**: `pnpm install --frozen-lockfile && pnpm dev` → http://localhost:5173 |
-| **подключить AI-агента к курсам** | [mcp-server](https://gitlab.com/tramplin1/mcp-server): вход под преподавателем через OAuth |
 
 ## Команда
 
