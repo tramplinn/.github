@@ -126,10 +126,7 @@
 | --- | --- |
 | **понять, зачем платформа** | [бизнес-ценность](https://gitlab.com/tramplin1/specs/-/blob/main/product/business-value.md) → [продукты](https://gitlab.com/tramplin1/specs/-/blob/main/product/products.md) → [кейсы по ролям](https://gitlab.com/tramplin1/specs/-/blob/main/product/use-cases.md) |
 | **запустить локально** | в **backend**: `make up && make migrate && make seed && make run`, затем в **frontend**: `pnpm install --frozen-lockfile && pnpm dev` → http://localhost:5173 |
-| **запускать код в задачах** | поднять [infra](https://gitlab.com/tramplin1/infra) с Piston и RabbitMQ |
 | **подключить AI-агента к курсам** | [mcp-server](https://gitlab.com/tramplin1/mcp-server): вход под преподавателем через OAuth |
-| **разобраться в API** | Swagger backend — http://localhost:8000/docs после запуска |
-| **посмотреть, что в работе** | [двуязычная платформа RU/EN](https://gitlab.com/tramplin1/specs/-/blob/main/changes/localization.md), [авторинг задач через MCP](https://gitlab.com/tramplin1/mcp-server/-/blob/main/docs/algorithm-authoring-prd.md) |
 
 ## Команда
 
