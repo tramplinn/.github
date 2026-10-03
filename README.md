@@ -1,129 +1,155 @@
-![Трамплин — знания становятся практикой. Учебная платформа колледжа ННГУ: курсы, практика и AI-помощь.](assets/cover.svg)
+<div align="center">
 
-<p align="center">
-  <a href="#обучение">Обучение</a> ·
-  <a href="#практика">Практика</a> ·
-  <a href="#преподавание">Преподавание</a> ·
-  <a href="#под-капотом">Под капотом</a> ·
-  <a href="#локальный-запуск">Запустить локально</a>
-</p>
+<img src="assets/logo.png" width="96" alt="Трамплин">
 
-**Трамплин** объединяет путь от первого урока до работающего кода: курсы с картой модулей, интерактивные тесты, алгоритмические задачи и AI-тьютор рядом. Преподаватели создают и публикуют материалы в том же пространстве.
+# Трамплин
 
-Учебная платформа колледжа ННГУ · Курсовой проект
+### Знания становятся практикой
 
-## Обучение
+Учебная платформа колледжа ННГУ: курсы с картой модулей, интерактивные тесты,
+алгоритмические задачи с запуском кода и AI-тьютор рядом с материалом.
 
-### Весь маршрут перед глазами
+[![Спецификации](https://img.shields.io/badge/Спецификации-продукт_и_кейсы-2b7fff?style=for-the-badge)](https://gitlab.com/tramplin1/specs)
+[![Архитектура](https://img.shields.io/badge/Архитектура-5_сервисов-16a34a?style=for-the-badge)](#под-капотом)
+[![Запуск](https://img.shields.io/badge/Запуск-локально_за_4_команды-9333ea?style=for-the-badge)](#с-чего-начать)
 
-Карта курса связывает модули и уроки в понятный маршрут. Связи подсказывают порядок изучения, а прогресс помогает вернуться к тому, на чём остановился.
+![Python](https://img.shields.io/badge/Python_3.14-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue_3-35495E?logo=vuedotjs&logoColor=4FC08D)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL_+_pgvector-4169E1?logo=postgresql&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?logo=rabbitmq&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker_Compose-2496ED?logo=docker&logoColor=white)
+![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)
 
-[![Карта курса Fullstack-разработка: модули, связи и прогресс обучения](assets/screenshots/course-map.jpg)](assets/screenshots/course-map.jpg)
-
-**Читать и пробовать.** Уроки с Markdown и подсветкой кода, тесты с разными типами ответов и интерактивными заданиями.
-
-**Спрашивать по ходу.** AI-тьютор помогает разобраться в материале урока. Рекомендации учитывают интересы и прогресс студента.
-
-<details>
-<summary>Посмотреть урок, интерактивный тест и AI-тьютора</summary>
-
-### Урок
-
-![Прохождение урока студентом](assets/screenshots/lesson.jpg)
-
-### Интерактивный тест
-
-![Вопрос с перетаскиванием ответов](assets/screenshots/quiz-dnd.jpg)
-
-### AI-тьютор
-
-![Чат с AI-тьютором по материалам урока](assets/screenshots/tutor-chat.jpg)
-
-</details>
-
-## Практика
-
-### От условия — к работающему решению
-
-Условие задачи, редактор кода и запуск решения на одном экране. Несколько языков программирования, свой ввод для проверки и тест-кейсы для оценки результата.
-
-[![Решение алгоритмической задачи: условие, редактор кода, запуск и отправка](assets/screenshots/algorithm-solve.jpg)](assets/screenshots/algorithm-solve.jpg)
-
-Код выполняется в изолированном окружении **Piston**, задания проходят через очередь **RabbitMQ**.
-
-## Преподавание
-
-### Создавать курсы так же удобно, как проходить
-
-Редактор уроков с предпросмотром Markdown, управление модулями и тестами, публикация материалов и AI-ассистент для авторов. Администраторы управляют пользователями и новостями платформы.
-
-<details>
-<summary>Посмотреть редактор урока и профили пользователей</summary>
-
-### Редактор урока
-
-![Редактирование урока с предпросмотром Markdown](assets/screenshots/lesson-editor.jpg)
-
-### Люди
-
-![Профили пользователей платформы](assets/screenshots/people.jpg)
-
-</details>
-
-**Курс можно наполнить и через AI-агента.** MCP-сервер подключает Codex, Claude Code и другие совместимые инструменты: вход под преподавателем через OAuth, чтение материалов, валидация изменений, просмотр diff и применение плана через API.
-
-## Под капотом
-
-Пять самостоятельных сервисов со своими репозиториями, документацией и CI/CD.
-
-| Репозиторий | За что отвечает | Основной стек |
-| :--- | :--- | :--- |
-| [**frontend ↗**](https://gitlab.com/tramplin1/frontend) | Интерфейс студента, преподавателя и администратора | Vue 3 · TypeScript · Vite · Pinia |
-| [**backend ↗**](https://gitlab.com/tramplin1/backend) | API, авторизация, курсы, прогресс и рекомендации | FastAPI · PostgreSQL · pgvector · Redis |
-| [**email-service ↗**](https://gitlab.com/tramplin1/email-service) | Доставка писем из очереди в SMTP | FastStream · RabbitMQ · aiosmtplib |
-| [**mcp-server ↗**](https://gitlab.com/tramplin1/mcp-server) | Работа AI-агентов с учебными материалами | FastMCP · httpx · OAuth 2.1 + PKCE |
-| [**infra ↗**](https://gitlab.com/tramplin1/infra) | Развёртывание, выполнение кода и наблюдаемость | Docker Compose · Caddy · Piston · Grafana |
-
-<details>
-<summary>Архитектура и границы сервисов</summary>
-
-![Схема архитектуры Tramplin](assets/arch.png)
-
-**Backend — единственный владелец базы данных.** Email-service получает задания из RabbitMQ и отправляет готовые письма; MCP-сервер обращается к API backend. Piston доступен только во внутренней сети и не имеет доступа к базе.
-
-Вход в платформу — по email-коду или через GitHub и Яндекс; сессии используют JWT. Доставка писем защищена circuit breaker.
-
-</details>
-
-<details>
-<summary>Инструменты разработки и качество</summary>
-
-- **Backend:** Python 3.14, асинхронный SQLAlchemy, Alembic, Dishka, FastStream и uv.
-- **Frontend:** Vue Router, Reka UI, CodeMirror и Vitest.
-- **Наблюдаемость:** Prometheus, Loki, Grafana и Alloy.
-- **Проверки:** Ruff, mypy в строгом режиме, pytest с покрытием ≥90% для backend и email-service; ESLint, Prettier и Vitest для frontend.
-- **CI/CD:** GitLab-пайплайны с линтингом, тестами, security-сканированием и деплоем immutable-образов на stage/prod.
-
-</details>
-
-## Локальный запуск
-
-Начните с [инструкции backend](https://gitlab.com/tramplin1/backend) и [инструкции frontend](https://gitlab.com/tramplin1/frontend): в них описаны зависимости и переменные окружения.
-
-В каталоге **backend**:
-
-```sh
-make up && make migrate && make seed && make run
-```
-
-В отдельном терминале, в каталоге **frontend**:
-
-```sh
-pnpm install --frozen-lockfile && pnpm dev
-```
-
-Интерфейс откроется на **http://localhost:5173**. Для выполнения алгоритмических задач и полной инфраструктуры подключите [infra](https://gitlab.com/tramplin1/infra), для доставки писем — [email-service](https://gitlab.com/tramplin1/email-service), для внешних AI-агентов — [mcp-server](https://gitlab.com/tramplin1/mcp-server). AI-функции требуют настройки LLM-провайдера в backend.
+</div>
 
 ---
 
-[PRD алгоритмической практики](https://gitlab.com/tramplin1/backend/-/blob/main/artifacts/prd/algorithmic-sessions.md) · [PRD авторинга задач через MCP](https://gitlab.com/tramplin1/mcp-server/-/blob/main/docs/algorithm-authoring-prd.md)
+## Зачем
+
+Учебный процесс в колледже разбросан по файлам, чатам и разным сервисам: теория в одном месте,
+практика в другом, а помощь — только на паре. **Трамплин** собирает путь от первого урока
+до работающего кода в одно пространство — с прогрессом, практикой и AI-помощью по ходу.
+Преподаватели создают и публикуют материалы там же. Бизнес-ценность и пользовательские
+кейсы — в [спецификациях](https://gitlab.com/tramplin1/specs).
+
+## Как это работает
+
+| 🗺️ Учиться | 🧩 Проверять себя | 💻 Практиковаться | ✍️ Преподавать |
+| :---: | :---: | :---: | :---: |
+| Карта курса связывает модули и уроки в маршрут, прогресс возвращает туда, где остановился | Тесты с разными типами ответов и интерактивными заданиями, AI-тьютор по материалу урока | Условие, редактор и запуск кода на одном экране; решения выполняются в изолированном Piston | Редактор уроков с live-превью, публикация и AI-агенты, наполняющие курс через MCP |
+
+<div align="center">
+<a href="assets/screenshots/course-map.jpg"><img src="assets/screenshots/course-map.jpg" width="720" alt="Карта курса: модули, связи и прогресс обучения"></a><br>
+<sub>Карта курса «Fullstack-разработка»: модули, связи и прогресс студента</sub>
+</div>
+
+<details>
+<summary>📸 Ещё скриншоты: урок, тест, AI-тьютор, задачи, редактор, люди</summary>
+
+<table>
+<tr>
+<td width="50%"><a href="assets/screenshots/lesson.jpg"><img src="assets/screenshots/lesson.jpg" alt="Урок"></a><br><sub>Урок с Markdown и подсветкой кода</sub></td>
+<td width="50%"><a href="assets/screenshots/quiz-dnd.jpg"><img src="assets/screenshots/quiz-dnd.jpg" alt="Интерактивный тест"></a><br><sub>Интерактивный тест с перетаскиванием</sub></td>
+</tr>
+<tr>
+<td><a href="assets/screenshots/tutor-chat.jpg"><img src="assets/screenshots/tutor-chat.jpg" alt="AI-тьютор"></a><br><sub>AI-тьютор по материалам урока</sub></td>
+<td><a href="assets/screenshots/algorithm-solve.jpg"><img src="assets/screenshots/algorithm-solve.jpg" alt="Решение задачи"></a><br><sub>Алгоритмическая задача: код, запуск, отправка</sub></td>
+</tr>
+<tr>
+<td><a href="assets/screenshots/lesson-editor.jpg"><img src="assets/screenshots/lesson-editor.jpg" alt="Редактор урока"></a><br><sub>Редактор урока с предпросмотром</sub></td>
+<td><a href="assets/screenshots/people.jpg"><img src="assets/screenshots/people.jpg" alt="Люди"></a><br><sub>Профили пользователей платформы</sub></td>
+</tr>
+</table>
+
+</details>
+
+## В цифрах
+
+<div align="center">
+
+![5 сервисов](https://img.shields.io/badge/5-сервисов-2b7fff?style=for-the-badge)
+![140+ эндпоинтов](https://img.shields.io/badge/140+-эндпоинтов_API-16a34a?style=for-the-badge)
+![37 таблиц](https://img.shields.io/badge/37-таблиц_в_модели_данных-6366f1?style=for-the-badge)
+![450+ тестов](https://img.shields.io/badge/450+-тестов-f59e0b?style=for-the-badge)
+![16 MCP-инструментов](https://img.shields.io/badge/16-MCP--инструментов-db2777?style=for-the-badge)
+
+</div>
+
+Покрытие тестами backend и email-service — не ниже 90 %; integration-тесты проверяют каждый
+эндпоинт на настоящем PostgreSQL. Интерфейс — на русском и английском.
+
+## Под капотом
+
+<table>
+<tr><th colspan="2">🎓 Продукт</th></tr>
+<tr>
+<td width="48" align="center">🖥️</td>
+<td><a href="https://gitlab.com/tramplin1/frontend"><b>frontend</b></a> — интерфейс студента, преподавателя и администратора: каталог, уроки, тесты, практика алгоритмов<br><sub>Vue 3 · TypeScript · Vite · Pinia · TanStack Query · CodeMirror</sub></td>
+</tr>
+<tr>
+<td align="center">⚙️</td>
+<td><a href="https://gitlab.com/tramplin1/backend"><b>backend</b></a> — API, авторизация, курсы, прогресс, рекомендации, AI-тьютор и ассистент; единственный владелец базы<br><sub>Python 3.14 · FastAPI · SQLAlchemy · Dishka · FastStream · pgvector</sub></td>
+</tr>
+<tr>
+<td align="center">📨</td>
+<td><a href="https://gitlab.com/tramplin1/email-service"><b>email-service</b></a> — доставка писем из очереди в SMTP с circuit breaker<br><sub>Python · FastStream · RabbitMQ · aiosmtplib</sub></td>
+</tr>
+<tr><th colspan="2">🤖 AI-агенты</th></tr>
+<tr>
+<td align="center">🔌</td>
+<td><a href="https://gitlab.com/tramplin1/mcp-server"><b>mcp-server</b></a> — Codex, Claude Code и другие агенты наполняют курсы от имени преподавателя: план, валидация, diff, применение<br><sub>FastMCP · httpx · OAuth 2.1 + PKCE</sub></td>
+</tr>
+<tr><th colspan="2">🏗️ Платформа</th></tr>
+<tr>
+<td align="center">🏗️</td>
+<td><a href="https://gitlab.com/tramplin1/infra"><b>infra</b></a> — stage/prod: HTTPS-прокси, брокер, изолированный запуск кода, логи и метрики<br><sub>Docker Compose · Caddy · RabbitMQ · Piston · Prometheus / Loki / Grafana / Alloy</sub></td>
+</tr>
+<tr><th colspan="2">📚 Знания</th></tr>
+<tr>
+<td align="center">📚</td>
+<td><a href="https://gitlab.com/tramplin1/specs"><b>specs</b></a> — бизнес-ценность, продукты, пользовательские кейсы по ролям и спецификации изменений<br><sub>Markdown</sub></td>
+</tr>
+</table>
+
+<div align="center">
+<a href="assets/arch.png"><img src="assets/arch.png" width="720" alt="Схема архитектуры Трамплина"></a><br>
+<sub>Backend — единственный владелец базы данных. Email-service берёт задания из RabbitMQ, MCP-сервер ходит в API backend, Piston живёт во внутренней сети без доступа к базе</sub>
+</div>
+
+## С чего начать
+
+| Я хочу… | Куда идти |
+| --- | --- |
+| **понять, зачем платформа** | [бизнес-ценность](https://gitlab.com/tramplin1/specs/-/blob/main/product/business-value.md) → [продукты](https://gitlab.com/tramplin1/specs/-/blob/main/product/products.md) → [кейсы по ролям](https://gitlab.com/tramplin1/specs/-/blob/main/product/use-cases.md) |
+| **запустить локально** | в **backend**: `make up && make migrate && make seed && make run`, затем в **frontend**: `pnpm install --frozen-lockfile && pnpm dev` → http://localhost:5173 |
+| **запускать код в задачах** | поднять [infra](https://gitlab.com/tramplin1/infra) с Piston и RabbitMQ |
+| **подключить AI-агента к курсам** | [mcp-server](https://gitlab.com/tramplin1/mcp-server): вход под преподавателем через OAuth |
+| **разобраться в API** | Swagger backend — http://localhost:8000/docs после запуска |
+| **посмотреть, что в работе** | [двуязычная платформа RU/EN](https://gitlab.com/tramplin1/specs/-/blob/main/changes/localization.md), [авторинг задач через MCP](https://gitlab.com/tramplin1/mcp-server/-/blob/main/docs/algorithm-authoring-prd.md) |
+
+## Команда
+
+<table>
+<tr>
+<td align="center" width="33%">
+<a href="https://gitlab.com/semao0"><img src="assets/team/semao0.png" width="80" alt=""><br><b>Семён Белоусов</b></a><br>
+<sub>Backend · Frontend · Инфраструктура</sub>
+</td>
+<td align="center" width="33%">
+<a href="https://gitlab.com/A1exandr2"><img src="assets/team/A1exandr2.png" width="80" alt=""><br><b>A1exandr2</b></a><br>
+<sub>&nbsp;</sub>
+</td>
+<td align="center" width="33%">
+<a href="https://gitlab.com/Hishhiki"><img src="assets/team/Hishhiki.png" width="80" alt=""><br><b>Hishhiki</b></a><br>
+<sub>&nbsp;</sub>
+</td>
+</tr>
+</table>
+
+<div align="center">
+<sub>Курсовой проект · Учебная платформа колледжа ННГУ, 2026</sub>
+</div>
