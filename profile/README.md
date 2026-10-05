@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.png" width="96" alt="Трамплин">
+<img src="../assets/logo.png" width="96" alt="Трамплин">
 
 # Трамплин
 
@@ -9,7 +9,7 @@
 Учебная платформа: курсы с картой модулей, интерактивные тесты,
 алгоритмические задачи с запуском кода и AI-тьютор рядом с материалом.
 
-[![Спецификации](https://img.shields.io/badge/Спецификации-продукт_и_кейсы-2b7fff?style=for-the-badge)](https://gitlab.com/tramplin1/specs)
+[![Спецификации](https://img.shields.io/badge/Спецификации-продукт_и_кейсы-2b7fff?style=for-the-badge)](https://github.com/tramplinn/specs)
 [![Архитектура](https://img.shields.io/badge/Архитектура-5_сервисов-16a34a?style=for-the-badge)](#под-капотом)
 [![Запуск](https://img.shields.io/badge/Запуск-локально_за_4_команды-9333ea?style=for-the-badge)](#с-чего-начать)
 
@@ -34,7 +34,7 @@
 практика в другом, а помощь — только на паре. **Трамплин** собирает путь от первого урока
 до работающего кода в одно пространство — с прогрессом, практикой и AI-помощью по ходу.
 Преподаватели создают и публикуют материалы там же. Бизнес-ценность и пользовательские
-кейсы — в [спецификациях](https://gitlab.com/tramplin1/specs).
+кейсы — в [спецификациях](https://github.com/tramplinn/specs).
 
 ## Как это работает
 
@@ -43,7 +43,7 @@
 | Карта курса связывает модули и уроки в маршрут, прогресс возвращает туда, где остановился | Тесты с разными типами ответов и интерактивными заданиями, AI-тьютор по материалу урока | Условие, редактор и запуск кода на одном экране; решения выполняются в изолированном Piston | Редактор уроков с live-превью, публикация и AI-агенты, наполняющие курс через MCP |
 
 <div align="center">
-<a href="assets/screenshots/course-map.jpg"><img src="assets/screenshots/course-map.jpg" width="720" alt="Карта курса: модули, связи и прогресс обучения"></a><br>
+<a href="../assets/screenshots/course-map.jpg"><img src="../assets/screenshots/course-map.jpg" width="720" alt="Карта курса: модули, связи и прогресс обучения"></a><br>
 <sub>Карта курса «Fullstack-разработка»: модули, связи и прогресс студента</sub>
 </div>
 
@@ -52,16 +52,16 @@
 
 <table>
 <tr>
-<td width="50%"><a href="assets/screenshots/lesson.jpg"><img src="assets/screenshots/lesson.jpg" alt="Урок"></a><br><sub>Урок с Markdown и подсветкой кода</sub></td>
-<td width="50%"><a href="assets/screenshots/quiz-dnd.jpg"><img src="assets/screenshots/quiz-dnd.jpg" alt="Интерактивный тест"></a><br><sub>Интерактивный тест с перетаскиванием</sub></td>
+<td width="50%"><a href="../assets/screenshots/lesson.jpg"><img src="../assets/screenshots/lesson.jpg" alt="Урок"></a><br><sub>Урок с Markdown и подсветкой кода</sub></td>
+<td width="50%"><a href="../assets/screenshots/quiz-dnd.jpg"><img src="../assets/screenshots/quiz-dnd.jpg" alt="Интерактивный тест"></a><br><sub>Интерактивный тест с перетаскиванием</sub></td>
 </tr>
 <tr>
-<td><a href="assets/screenshots/tutor-chat.jpg"><img src="assets/screenshots/tutor-chat.jpg" alt="AI-тьютор"></a><br><sub>AI-тьютор по материалам урока</sub></td>
-<td><a href="assets/screenshots/algorithm-solve.jpg"><img src="assets/screenshots/algorithm-solve.jpg" alt="Решение задачи"></a><br><sub>Алгоритмическая задача: код, запуск, отправка</sub></td>
+<td><a href="../assets/screenshots/tutor-chat.jpg"><img src="../assets/screenshots/tutor-chat.jpg" alt="AI-тьютор"></a><br><sub>AI-тьютор по материалам урока</sub></td>
+<td><a href="../assets/screenshots/algorithm-solve.jpg"><img src="../assets/screenshots/algorithm-solve.jpg" alt="Решение задачи"></a><br><sub>Алгоритмическая задача: код, запуск, отправка</sub></td>
 </tr>
 <tr>
-<td><a href="assets/screenshots/lesson-editor.jpg"><img src="assets/screenshots/lesson-editor.jpg" alt="Редактор урока"></a><br><sub>Редактор урока с предпросмотром</sub></td>
-<td><a href="assets/screenshots/people.jpg"><img src="assets/screenshots/people.jpg" alt="Люди"></a><br><sub>Профили пользователей платформы</sub></td>
+<td><a href="../assets/screenshots/lesson-editor.jpg"><img src="../assets/screenshots/lesson-editor.jpg" alt="Редактор урока"></a><br><sub>Редактор урока с предпросмотром</sub></td>
+<td><a href="../assets/screenshots/people.jpg"><img src="../assets/screenshots/people.jpg" alt="Люди"></a><br><sub>Профили пользователей платформы</sub></td>
 </tr>
 </table>
 
@@ -88,35 +88,35 @@
 <tr><th colspan="2">🎓 Продукт</th></tr>
 <tr>
 <td width="48" align="center">🖥️</td>
-<td><a href="https://gitlab.com/tramplin1/frontend"><b>frontend</b></a> — интерфейс студента, преподавателя и администратора: каталог, уроки, тесты, практика алгоритмов<br><sub>Vue 3 · TypeScript · Vite · Pinia · TanStack Query · CodeMirror</sub></td>
+<td><a href="https://github.com/tramplinn/frontend"><b>frontend</b></a> — интерфейс студента, преподавателя и администратора: каталог, уроки, тесты, практика алгоритмов<br><sub>Vue 3 · TypeScript · Vite · Pinia · TanStack Query · CodeMirror</sub></td>
 </tr>
 <tr>
 <td align="center">⚙️</td>
-<td><a href="https://gitlab.com/tramplin1/backend"><b>backend</b></a> — API, авторизация, курсы, прогресс, рекомендации, AI-тьютор и ассистент; единственный владелец базы<br><sub>Python 3.14 · FastAPI · SQLAlchemy · Dishka · FastStream · pgvector</sub></td>
+<td><a href="https://github.com/tramplinn/backend"><b>backend</b></a> — API, авторизация, курсы, прогресс, рекомендации, AI-тьютор и ассистент; единственный владелец базы<br><sub>Python 3.14 · FastAPI · SQLAlchemy · Dishka · FastStream · pgvector</sub></td>
 </tr>
 <tr>
 <td align="center">📨</td>
-<td><a href="https://gitlab.com/tramplin1/email-service"><b>email-service</b></a> — доставка писем из очереди в SMTP с circuit breaker<br><sub>Python · FastStream · RabbitMQ · aiosmtplib</sub></td>
+<td><a href="https://github.com/tramplinn/email-service"><b>email-service</b></a> — доставка писем из очереди в SMTP с circuit breaker<br><sub>Python · FastStream · RabbitMQ · aiosmtplib</sub></td>
 </tr>
 <tr><th colspan="2">🤖 AI-агенты</th></tr>
 <tr>
 <td align="center">🔌</td>
-<td><a href="https://gitlab.com/tramplin1/mcp-server"><b>mcp-server</b></a> — Codex, Claude Code и другие агенты наполняют курсы от имени преподавателя: план, валидация, diff, применение<br><sub>FastMCP · httpx · OAuth 2.1 + PKCE</sub></td>
+<td><a href="https://github.com/tramplinn/mcp-server"><b>mcp-server</b></a> — Codex, Claude Code и другие агенты наполняют курсы от имени преподавателя: план, валидация, diff, применение<br><sub>FastMCP · httpx · OAuth 2.1 + PKCE</sub></td>
 </tr>
 <tr><th colspan="2">🏗️ Платформа</th></tr>
 <tr>
 <td align="center">🏗️</td>
-<td><a href="https://gitlab.com/tramplin1/infra"><b>infra</b></a> — stage/prod: HTTPS-прокси, брокер, изолированный запуск кода, логи и метрики<br><sub>Docker Compose · Caddy · RabbitMQ · Piston · Prometheus / Loki / Grafana / Alloy</sub></td>
+<td><a href="https://github.com/tramplinn/infra"><b>infra</b></a> — stage/prod: HTTPS-прокси, брокер, изолированный запуск кода, логи и метрики<br><sub>Docker Compose · Caddy · RabbitMQ · Piston · Prometheus / Loki / Grafana / Alloy</sub></td>
 </tr>
 <tr><th colspan="2">📚 Знания</th></tr>
 <tr>
 <td align="center">📚</td>
-<td><a href="https://gitlab.com/tramplin1/specs"><b>specs</b></a> — бизнес-ценность, продукты, пользовательские кейсы по ролям и спецификации изменений<br><sub>Markdown</sub></td>
+<td><a href="https://github.com/tramplinn/specs"><b>specs</b></a> — бизнес-ценность, продукты, пользовательские кейсы по ролям и спецификации изменений<br><sub>Markdown</sub></td>
 </tr>
 </table>
 
 <div align="center">
-<a href="assets/arch.png"><img src="assets/arch.png" width="720" alt="Схема архитектуры Трамплина"></a><br>
+<a href="../assets/arch.png"><img src="../assets/arch.png" width="720" alt="Схема архитектуры Трамплина"></a><br>
 <sub>Backend — единственный владелец базы данных. Email-service берёт задания из RabbitMQ, MCP-сервер ходит в API backend, Piston живёт во внутренней сети без доступа к базе</sub>
 </div>
 
@@ -124,16 +124,16 @@
 
 | Я хочу… | Куда идти |
 | --- | --- |
-| **понять, зачем платформа** | [бизнес-ценность](https://gitlab.com/tramplin1/specs/-/blob/main/product/business-value.md) → [продукты](https://gitlab.com/tramplin1/specs/-/blob/main/product/products.md) → [кейсы по ролям](https://gitlab.com/tramplin1/specs/-/blob/main/product/use-cases.md) |
+| **понять, зачем платформа** | [бизнес-ценность](https://github.com/tramplinn/specs/blob/main/product/business-value.md) → [продукты](https://github.com/tramplinn/specs/blob/main/product/products.md) → [кейсы по ролям](https://github.com/tramplinn/specs/blob/main/product/use-cases.md) |
 | **запустить локально** | в **backend**: `make up && make migrate && make seed && make run`, затем в **frontend**: `pnpm install --frozen-lockfile && pnpm dev` → http://localhost:5173 |
-| **подключить AI-агента к курсам** | [mcp-server](https://gitlab.com/tramplin1/mcp-server): вход под преподавателем через OAuth |
+| **подключить AI-агента к курсам** | [mcp-server](https://github.com/tramplinn/mcp-server): вход под преподавателем через OAuth |
 
 ## Команда
 
 <table>
 <tr>
 <td align="center">
-<a href="https://gitlab.com/semao0"><img src="assets/team/semao0.png" width="80" alt=""><br><b>Семён Белоусов</b></a><br>
+<a href="https://github.com/semao0"><img src="../assets/team/semao0.png" width="80" alt=""><br><b>Семён Белоусов</b></a><br>
 <sub>Backend · Frontend · Инфраструктура</sub>
 </td>
 </tr>
