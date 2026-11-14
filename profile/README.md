@@ -9,6 +9,11 @@
 A learning platform with courses, quizzes, runnable coding problems,
 and an AI tutor next to every lesson.
 
+[![Live app](https://img.shields.io/badge/Live_app-tramplinn.tech-2563eb?style=for-the-badge)](https://tramplinn.tech)
+[![API](https://img.shields.io/badge/API-readiness-16a34a?style=for-the-badge)](https://tramplinn.tech/api/v1/health/ready)
+[![MCP](https://img.shields.io/badge/MCP-authoring-0F766E?style=for-the-badge)](https://mcp.tramplinn.tech/mcp)
+[![Docs](https://img.shields.io/badge/Docs-system_guide-9333ea?style=for-the-badge)](https://github.com/tramplinn/specs)
+
 ![Python](https://img.shields.io/badge/Python_3.14-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue_3-35495E?logo=vuedotjs&logoColor=4FC08D)
@@ -16,8 +21,7 @@ and an AI tutor next to every lesson.
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL_+_pgvector-4169E1?logo=postgresql&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?logo=rabbitmq&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker_Compose-2496ED?logo=docker&logoColor=white)
-![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)
 ![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)
 
 </div>
@@ -75,22 +79,22 @@ and the college keeps its own platform and data. More in the
 <td><a href="https://github.com/tramplinn/frontend"><b>frontend</b></a> — the web app for students, teachers, and admins<br><sub>Vue 3 · TypeScript · Vite · Pinia · TanStack Query · CodeMirror</sub></td>
 </tr>
 <tr>
-<td><a href="https://github.com/tramplinn/backend"><b>backend</b></a> — API, auth, courses, progress, recommendations, AI tutor; the only service with database access<br><sub>Python 3.14 · FastAPI · SQLAlchemy · Dishka · FastStream · pgvector</sub></td>
+<td><a href="https://github.com/tramplinn/backend"><b>backend</b></a> — API, auth, courses, progress, recommendations, AI tutor; owns application data and its background workers<br><sub>Python 3.14 · FastAPI · SQLAlchemy · Dishka · FastStream · pgvector</sub></td>
 </tr>
 <tr>
 <td><a href="https://github.com/tramplinn/email-service"><b>email-service</b></a> — sends emails from a queue over SMTP<br><sub>Python · FastStream · RabbitMQ · aiosmtplib</sub></td>
 </tr>
 <tr><th>AI agents</th></tr>
 <tr>
-<td><a href="https://github.com/tramplinn/mcp-server"><b>mcp-server</b></a> — lets Codex, Claude Code, and other agents fill courses on a teacher's behalf<br><sub>FastMCP · httpx · OAuth 2.1 + PKCE</sub></td>
+<td><a href="https://github.com/tramplinn/mcp-server"><b>mcp-server</b></a> — lets Codex, Claude Code, and other agents fill courses on a teacher's behalf<br><sub>FastMCP · httpx · OAuth 2.1 + PKCE · separate OAuth-state database</sub></td>
 </tr>
 <tr><th>Platform</th></tr>
 <tr>
-<td><a href="https://github.com/tramplinn/infra"><b>infra</b></a> — proxy, queues, code sandbox, logs, and metrics for stage and prod<br><sub>Docker Compose · Caddy · RabbitMQ · Piston · Prometheus / Loki / Grafana / Alloy</sub></td>
+<td><a href="https://github.com/tramplinn/infra"><b>infra</b></a> — production databases, queues, and code sandbox<br><sub>k3s · PostgreSQL / pgvector · Redis · RabbitMQ · Piston</sub></td>
 </tr>
 <tr><th>Knowledge</th></tr>
 <tr>
-<td><a href="https://github.com/tramplinn/specs"><b>specs</b></a> — business value, products, use cases, and upcoming changes<br><sub>Markdown</sub></td>
+<td><a href="https://github.com/tramplinn/specs"><b>specs</b></a> — product, architecture, data ownership, HTTP / MCP integration and operations<br><sub>Markdown · Mermaid · Source links</sub></td>
 </tr>
 </table>
 
@@ -102,6 +106,9 @@ and the college keeps its own platform and data. More in the
 
 | I want to… | Go to |
 | --- | --- |
-| **understand the product** | [business value](https://github.com/tramplinn/specs/blob/main/product/business-value.md) → [products](https://github.com/tramplinn/specs/blob/main/product/products.md) → [use cases by role](https://github.com/tramplinn/specs/blob/main/product/use-cases.md) |
-| **run it locally** | in **backend**: `make up && make migrate && make seed && make run`, then in **frontend**: `pnpm install --frozen-lockfile && pnpm dev` → http://localhost:5173 |
-| **connect an AI agent** | [mcp-server](https://github.com/tramplinn/mcp-server), sign in as a teacher |
+| **try the running app** | [tramplinn.tech](https://tramplinn.tech) — courses, lessons, quizzes and practice |
+| **understand the product** | [business value](https://github.com/tramplinn/specs/blob/main/product/business-value.md) → [products](https://github.com/tramplinn/specs/blob/main/product/products.md) → [use cases](https://github.com/tramplinn/specs/blob/main/product/use-cases.md) |
+| **understand the system** | [service map](https://github.com/tramplinn/specs/blob/main/architecture/system.md) → [data ownership](https://github.com/tramplinn/specs/blob/main/architecture/data.md) → [flows](https://github.com/tramplinn/specs/blob/main/architecture/flows.md) |
+| **run locally or deploy** | [run and deploy](https://github.com/tramplinn/specs/blob/main/operations/run-and-deploy.md), with links to component settings and pipelines |
+| **connect an AI agent** | [HTTP and MCP guide](https://github.com/tramplinn/specs/blob/main/integration/http-and-mcp.md) → [client setup](https://github.com/tramplinn/mcp-server#connecting); sign in as a teacher or admin |
+| **diagnose a failure** | [troubleshooting](https://github.com/tramplinn/specs/blob/main/operations/troubleshooting.md) — email, jobs, Piston, secrets and MCP |
